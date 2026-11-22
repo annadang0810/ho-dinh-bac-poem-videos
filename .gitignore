@@ -1,0 +1,8 @@
+*.mp4
+*.wav
+*.m4a
+*.mp3
+st_*.jpg
+list.txt
+*.docx
+__pycache__/
