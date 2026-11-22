@@ -283,7 +283,7 @@ def grade(t):
 
 # lightning far out at sea ("chớp biển"), on stanza 3 line 3
 _tl = TM["lines"][2][2]
-FLASHES = [(_tl + 0.7, 1.0), (_tl + 0.95, 0.6), (_tl + 3.2, 0.5)]
+FLASHES = [(_tl + 2.1, 1.0), (_tl + 2.35, 0.6), (_tl + 4.6, 0.45)]   # on the words "chớp biển"
 def flash(t): return sum(a * math.exp(-((t - tk) / 0.07) ** 2) for tk, a in FLASHES)
 FLASH_GLOW = np.exp(-(((xx - 820) / 420) ** 2 + ((yy - 720) / 260) ** 2))[..., None]
 

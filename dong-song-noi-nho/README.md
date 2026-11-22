@@ -75,4 +75,12 @@ python3 silk.py stills 3 14 27 36.3 50 59
 (python3 silk.py full 0 31 a.mp4 & python3 silk.py full 31 61.5 b.mp4 & wait)
 ```
 
-Once Hà Hồ's recording arrives, write `timing.json` with each line's start time (taken from ffmpeg `silencedetect` and checked by ear), then re-render. Mix the voice as the main audio, with the music ducked to about 25%.
+`timing.json` holds the line start times taken from Hà Hồ's recording. The times were found with pause detection and energy minima, then checked against the syllable count of each line. The recording itself is not in the repo. The long pause after the intro (14.0–24.3 s) is cut, and the voice starts at video t = 1.0 s.
+
+```bash
+python3 music.py music.wav                      # music, ducked to 25% under the voice
+ffmpeg -i voice.m4a -filter_complex "[0:a]atrim=2.3:14.0,asetpts=N/SR/TB[a];[0:a]atrim=24.3:88.5,asetpts=N/SR/TB,afade=t=in:d=0.3[b];[a][b]concat=n=2:v=0:a=1,highpass=f=80,afftdn=nf=-30,acompressor=threshold=-24dB:ratio=3:attack=10:release=200,loudnorm=I=-16:TP=-1.5:LRA=11,adelay=1000:all=1,aresample=44100,aformat=channel_layouts=stereo[v]" -map "[v]" voice_clean.wav
+for r in "0 21.2 p1" "21.2 42.3 p2" "42.3 63.4 p3" "63.4 84.54 p4"; do set -- $r; python3 silk.py full $1 $2 $3.mp4 & done; wait
+printf "file '%s'\n" p1.mp4 p2.mp4 p3.mp4 p4.mp4 > list.txt
+ffmpeg -f concat -i list.txt -i voice_clean.wav -i music.wav -filter_complex "[1:a][2:a]amix=inputs=2:normalize=0,alimiter=limit=0.95[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 160k dong-song-noi-nho.mp4
+```
