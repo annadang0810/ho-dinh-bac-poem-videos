@@ -13,7 +13,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = sys.argv[1] if len(sys.argv) > 1 else "music.wav"
-STYLE = sys.argv[2] if len(sys.argv) > 2 else "tranh"
+STYLE = sys.argv[2] if len(sys.argv) > 2 else "sao"          # Hà Hồ chose sáo trúc
 TM = json.load(open(os.path.join(HERE, "timing.json"))) if os.path.exists(os.path.join(HERE, "timing.json")) else {}
 DUR = float(sys.argv[3]) if len(sys.argv) > 3 else TM.get("dur", 75.0)
 SR = 44100; n = int(SR * DUR); out = np.zeros(n)
