@@ -71,4 +71,12 @@ Hà Hồ asked for a real-looking pagoda and sent photos found online (press pho
 
 ## Render
 
-Same as `khoanh-khac-dong-ve/`: write `timing.json` from the recording, then run `python3 music.py music.wav sao`, the 4-part `silk.py full` render, and the final mix.
+`timing.json` holds the line start times taken from Hà Hồ's recording. They were found with pause detection, and each line was checked against the lục bát rhythm: 6-syllable lines run about 2 s and 8-syllable lines about 3 s. The recording is not in the repo. It is trimmed to [0.9, 64.5] s and starts at video t = 0.8 s.
+
+```bash
+python3 music.py music.wav sao
+ffmpeg -i voice.m4a -af "atrim=0.9:64.5,asetpts=N/SR/TB,afade=t=in:d=0.2,highpass=f=80,afftdn=nf=-30,acompressor=threshold=-24dB:ratio=3:attack=10:release=200,loudnorm=I=-16:TP=-1.5:LRA=11,adelay=800:all=1,aresample=44100,aformat=channel_layouts=stereo" voice_clean.wav
+for r in "0 18.16 p1" "18.16 36.32 p2" "36.32 54.48 p3" "54.48 72.62 p4"; do set -- $r; python3 silk.py full $1 $2 $3.mp4 & done; wait
+printf "file '%s'\n" p1.mp4 p2.mp4 p3.mp4 p4.mp4 > list.txt
+ffmpeg -f concat -i list.txt -i voice_clean.wav -i music.wav -filter_complex "[1:a][2:a]amix=inputs=2:normalize=0,alimiter=limit=0.95[a]" -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 160k -movflags +faststart tham-lai-chua-xua.mp4
+```
