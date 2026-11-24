@@ -59,13 +59,14 @@ Bỏ buồn, bỏ nhớ sau mình /
 
 ## Scene
 
-The scene is lifelike and drawn entirely by code. It builds on the village scene of `mua-dong-thuong-me/`.
+Hà Hồ asked for a real-looking pagoda and sent photos found online (press photos with a watermark). Those photos are not used, to avoid copyright claims. The scene is drawn entirely by code in the style of a northern mountain pagoda, with no copying of any one photo:
 
-- An old pagoda with two tiers of upswept, mossy tiled roofs (đao cong) and a pearl on the ridge. It has red pillars and doors, a stone courtyard with a bronze incense burner (lư hương) and a tam quan gate across the path. A frangipani tree (cây đại) stands on the left, with cream flowers that drift down.
-- **Stanza 1:** a misty morning. The nun, in a brown robe and head scarf, stands in the courtyard with her palms together.
-- **Stanza 2:** a faded, rainy memory of spring. The girl of long ago, with long black hair and a white áo dài, walks up the path to the pagoda in the rain.
-- **Stanza 3:** the sun comes out. On "Tình tan như nắng qua sân" a patch of sunlight slides across the courtyard and fades.
-- **Stanza 4:** dusk. Lamps are lit for the evening sutras, and the nun stands by the incense burner as the smoke rises.
+- A forested hill under a soft sky, with a white stupa (bảo tháp) on the top, pines and granite boulders.
+- A stone terrace with a red railing. On it stands the main hall: orange tiles, white ridges, upswept roof corners (đao cong), red columns, white end pillars and a two-tier pavilion above. There are side halls, a bell pavilion (gác chuông) with a bronze bell, and an incense urn. Stone stairs with red handrails run down the hillside, and pines frame the foreground.
+- **Stanza 1:** a misty morning. The nun, in a brown robe and head scarf, stands on the terrace with her palms together.
+- **Stanza 2:** a faded, rainy memory of spring. The girl of long ago, with long black hair and a white áo dài, climbs the stairs in the rain.
+- **Stanza 3:** the sun comes out. On "Tình tan như nắng qua sân" a patch of sunlight slides across the terrace and fades.
+- **Stanza 4:** dusk. Lamps are lit for the evening sutras, and the nun stands by the incense urn as the smoke rises.
 - **Music:** sáo trúc with a synthesized temple bell (chuông chùa) struck at the start and again as the poem ends.
 
 ## Render
