@@ -32,11 +32,14 @@ The poem has 14 lục bát lines, shown as three stanzas of four and a closing c
 
 ## Kịch bản ghi âm (chỉ giọng)
 
+The intro is option 3 of three, chosen by Hà Hồ.
+
 `/` = ngừng ngắn · `//` = ngừng lâu (khoảng 2 giây)
 
 ```
-Xin chào cả nhà, tôi là Hà Hồ. /
-Mời mọi người cùng nghe bài thơ "Chợ làng" của bố tôi, nhà thơ Hồ Đình Bắc. //
+Mỗi lần về quê, điều tôi nhớ nhất là phiên chợ sớm dưới gốc đa đầu làng. /
+Ở đó, quên mang tiền vẫn được mua, vì ai cũng là người cùng xóm. /
+Tôi là Hà Hồ. Mời cả nhà cùng nghe bài thơ "Chợ làng" của bố tôi, nhà thơ Hồ Đình Bắc. //
 
 Về quê đến với chợ làng /
 Người quen khách lạ vội vàng bán mua /
