@@ -1,0 +1,50 @@
+{
+ "_note": "voice: Hà Hồ recording (Andretti_Dr_2_5); kept [0.8, 51.0] placed at video t=0.8; lines checked by 6/8 syllable lengths",
+ "title": [
+  0.5,
+  9.58
+ ],
+ "lines": [
+  [
+   10.58,
+   13.34,
+   17.06,
+   19.42
+  ],
+  [
+   23.88,
+   26.22,
+   29.98,
+   32.8
+  ],
+  [
+   36.98,
+   39.52,
+   42.82,
+   45.76
+  ]
+ ],
+ "stanza_end": [
+  23.48,
+  36.58,
+  51.84
+ ],
+ "end": [
+  52.24,
+  59.24
+ ],
+ "dur": 59.74,
+ "voice_cuts": [
+  [
+   0.8,
+   51.0
+  ]
+ ],
+ "voice_at": 0.8,
+ "voice_spans": [
+  [
+   1.24,
+   49.84
+  ]
+ ]
+}

@@ -314,7 +314,8 @@ for _ in range(260):
     dg.line([(x, y), (x + rng.uniform(-8, 8), y - h_)], fill=255, width=2)
 over(base, C(132, 124, 88), A(grass, 0.8) * 0.6)
 # spring green that creeps into the fields in the last stanza
-SPRING_FIELD = LAND_M * np.clip((yy - LAND_Y) / 200, 0, 1)[..., None] * (0.6 + 0.4 * noise_img(14, 24, 20)) * (1 - PATH_M)
+OBJ_M = np.clip(A(bam, 1.0) + A(bleaf, 1.2) + TREE_M + A(wall, 0.8) + ROOF_M + A(hay, 1) + A(yard, 1), 0, 1)   # keep season colours off these
+SPRING_FIELD = LAND_M * np.clip((yy - LAND_Y) / 200, 0, 1)[..., None] * (0.6 + 0.4 * noise_img(14, 24, 20)) * (1 - PATH_M) * (1 - OBJ_M)
 # season foliage on the old tree: summer green, autumn gold
 lg, la_ = Lm(), Lm(); dlg, dla = ImageDraw.Draw(lg), ImageDraw.Draw(la_)
 for (x, y) in TWIG_PTS:
