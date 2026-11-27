@@ -443,9 +443,9 @@ def walk(t, keys):
 def scale_at(y):
     return 0.55 + 1.2 * (y - 1290) / (H - 1290)
 # buyers: a neighbour woman comes out through the gate; a stranger walks up from the fields
-BW = [(LN[0][1] - 0.5, GX, GYb + 6), (LN[0][1] + 4, 700, 1500), (LN[1][3], 720, 1520), (LN[2][0] - 0.5, 800, 1680),
+BW = [(min(LN[0][1] - 0.5, T_TITLE[0] + 8), GX, GYb + 6), (min(LN[0][1] + 4, T_TITLE[0] + 15), 700, 1500), (LN[1][3], 720, 1520), (LN[2][0] - 0.5, 800, 1680),
       (LN[2][1] + 0.5, 800, 1680), (SE[2], GX, GYb + 6)]
-BM = [(LN[0][1] - 0.5, 560, H + 80), (LN[0][1] + 5, 420, 1520), (LN[2][1], 420, 1520), (SE[2] + 2, 600, H + 100)]
+BM = [(min(LN[0][1] - 0.5, T_TITLE[0] + 13), 560, H + 80), (min(LN[0][1] + 5, T_TITLE[0] + 20), 420, 1520), (LN[2][1], 420, 1520), (SE[2] + 2, 600, H + 100)]
 
 def frame_at(t):
     mult, desat, a = light(t)
